@@ -1,9 +1,7 @@
 <template>
-<div class="home">
-<header1 title="首页">
-<span slot="left" class="left">返回</span>
-</header1>
-   home内容
+<div class="shop">
+<header1 title="购物车"></header1>
+   shop内容
    <ul class="con">
    	<li v-for="item in items">
       {{item.con}}
@@ -11,6 +9,7 @@
    </ul>
 </div>
 </template>
+
 <script type="text/javascript">
 import Header1 from '../../component/header/header.vue';
 export default{
