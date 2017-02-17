@@ -1,7 +1,7 @@
 <template>
-<div class="shop">
-<header1 title="购物车"></header1>
-   shop内容
+<div class="class">
+<header1 title="分类"></header1>
+   class内容
    <ul class="con">
    	<li v-for="item in items">
       {{item.con}}
