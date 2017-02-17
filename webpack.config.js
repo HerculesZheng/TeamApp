@@ -1,11 +1,8 @@
 var webpack = require("webpack");
-//生成CSS文件
-// var E = require("extract-text-webpack-plugin");
 //生成HTML
 var html = require("html-webpack-plugin")
 //删除文件
 var clean = require('clean-webpack-plugin');
-
 module.exports = {
 	entry:"./app/app.js",
 	output:{
@@ -32,7 +29,7 @@ module.exports = {
 			}
 		]
 	},
-	//sudo npm install webpack-dev-server -g
+
 	devServer: {
 	  contentBase:"./www",
       inline: true,
@@ -57,27 +54,4 @@ module.exports = {
 		}
 	}
 }
-
-
-
-// sudo npm install webpack html-webpack-plugin clean-webpack-plugin style-loader css-loader less-loader less url-loader file-loader vue vue-router vue-loader vue-template-compiler babel-loader babel-preset-es2015 babel-core babel-plugin-transform-runtime 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
