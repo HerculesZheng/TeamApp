@@ -62,7 +62,7 @@
 
 <script type="text/javascript">
 	import Header1 from '../../../component/header/header.vue';
-	import $ from '../../../common/js/jquery-3.1.1.min.js';
+	import $ from '../../../common/js/jQuery-3.1.1.min.js';
 	export default{
 		components:{
 			Header1

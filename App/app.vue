@@ -61,7 +61,6 @@ html,body{
 	flex: 1;
 	display: block;
 	text-align: center;
-	line-height: 50px;
 	color: #808080;
 }
 .nav .active{
