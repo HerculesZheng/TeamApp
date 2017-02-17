@@ -6,7 +6,7 @@
  <div slot="left" class="leaguer_right">注册</div>
 </header1>
 <div class="log_img">
-  <img src="./img/denglu.png">
+  <img src="../my/img/denglu.png">
 </div>
 <form action="" name="" class="log_form">
  <div class="log_name">

@@ -6,9 +6,15 @@ import App from "./app.vue";
 import Home from './pages/home/home.vue';
 import Member from './pages/member/member.vue';
 import Class from './pages/class/class.vue';
-import Shop from './pages/shop/shop.vue';
+// import Shop from './pages/shop/shop.vue';
+import Cart from "./pages/cart/cart.vue";
+
+import Login from "./pages/account/login.vue";
+import Register from "./pages/account/register.vue";
+import ChangePwd from "./pages/account/changePwd.vue";
+
 import My from './pages/my/my.vue';
-import My_login from './pages/my/my_login.vue';
+// import My_login from './pages/my/my_login.vue';
 import My_message from './pages/my/my_message.vue';
 import My_order from './pages/my/my_order.vue';
 import My_collection from './pages/my/my_collection.vue';
@@ -39,15 +45,23 @@ import Food_detail from "./pages/home/life_food/food_detail.vue";
 
 Vue.use(VueRouter)
 
+const auth={
+  isLoggedIn:true,
+  account:"",
+  name:"",
+  phoneNumber:""
+}
+
 const router = new VueRouter({
 	// mode:'history',
     routes:[
       {path:"/",component:Home},
       {path:"/member",component:Member},
       {path:"/class",component:Class},
-      {path:"/shop",component:Shop},
-      {path:"/my",component:My},
-      {path:"/login",component:My_login},
+      // {path:"/shop",component:Shop},
+      {path:"/cart",component:Cart,meta:{requiresAuth:true}},
+      {path:"/my",component:My,meta:{requiresAuth:true}},
+      {path:"/login",component:Login},
       {path:"/message",component:My_message},
       {path:"/order",component:My_order},
       {path:"/collection",component:My_collection},
@@ -66,11 +80,29 @@ const router = new VueRouter({
       {path:"/Life_home",component:Life_home},
       {path:"/life_service",component:Life_service},
       {path:"/life_wonderful_estate",component:Life_wonderful_estate},
-      {path:"/food_detail",component:Food_detail}
+      {path:"/food_detail",component:Food_detail},
+      // {path:"/login",component:Login},
+      {path:"/register",component:Register},
+      {path:"/changePwd",component:ChangePwd}
     ]
 })
 // 指定一开始加载的页面
 // router.push("class");
+
+router.beforeEach((to,from,next)=>{
+  if (to.matched.some(record=>record.meta.requiresAuth)) {
+    if (!auth.isLoggedIn) {
+      next({
+        path:"/login",
+        query:{redirect:to.fullPath}
+      })
+    }else {
+      next()
+    }
+  }else{
+    next()
+  }
+})
 
 new Vue({
     router,
