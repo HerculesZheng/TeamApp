@@ -1,7 +1,11 @@
 import Vue from 'vue';
 import VueRouter from  'vue-router';
 
+<<<<<<< HEAD
 import App from "./app.vue";
+=======
+import  App from "./app.vue";
+>>>>>>> makeboluo-master
 import Home from './pages/home/home.vue';
 import Member from './pages/member/member.vue';
 import Class from './pages/class/class.vue';
@@ -19,6 +23,7 @@ import Mes_name from './pages/my/mes_name.vue';
 import Mes_contact from './pages/my/mes_contact.vue';
 import Contact_edit from './pages/my/contact_edit.vue';
 
+<<<<<<< HEAD
 import Area from "./pages/home/area.vue";
 import Search from "./pages/home/search.vue";
 
@@ -34,6 +39,8 @@ import Life_wonderful_estate from "./pages/home/life_wonderful/life_wonderful_es
 
 //商品详情
 import Food_detail from "./pages/home/life_food/food_detail.vue";
+=======
+>>>>>>> makeboluo-master
 
 Vue.use(VueRouter)
 
@@ -56,6 +63,7 @@ const router = new VueRouter({
       {path:"/mes_name",component:Mes_name},
       {path:"/mes_contact",component:Mes_contact}, 
       {path:"/contact_edit",component:Contact_edit}, 
+<<<<<<< HEAD
       {path:"/area",component:Area},
       {path:"/search",component:Search},
       {path:"/life_wonderful",component:Life_wonderful},
@@ -65,6 +73,8 @@ const router = new VueRouter({
       {path:"/life_service",component:Life_service},
       {path:"/life_wonderful_estate",component:Life_wonderful_estate},
       {path:"/food_detail",component:Food_detail}
+=======
+>>>>>>> makeboluo-master
     ]
 })
 // 指定一开始加载的页面
