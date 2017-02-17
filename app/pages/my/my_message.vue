@@ -38,19 +38,19 @@
 
 <ul class="message_server">
   <li>
-   <router-link to="">
+   <router-link to="/changepass">
       <span>修改密码</span>
       <span class="iconfont icon-next iconfont_right"></span>
    </router-link>
   </li>
   <li>
-   <router-link to="">
+   <router-link to="/changepurse">
       <span>修改钱包密码</span>
       <span class="iconfont icon-next iconfont_right"></span>
    </router-link>
   </li>
   <li>
-   <router-link to="">
+   <router-link to="/offer">
       <span>我能供应</span>
       <span class="iconfont icon-next iconfont_right"></span>
    </router-link>

@@ -6,7 +6,7 @@
 </header1>
  <form action="" name="" class="edit_form">
 <div>
-<label class="edit_tel">
+<label>
   <input type="" name="" placeholder="手机号码">
 </label>
 <label>
@@ -14,7 +14,7 @@
   <span>获取验证码</span>
 </label>
 </div>
-<label class="edit_sure" type="submit" name="">确定</label>
+<label><input class="edit_sure" type="submit" name="" value="确定"></label>
 </form>
 <div class="bottom_mark"></div>
 </div>
@@ -31,11 +31,8 @@ export default{
 <style type="text/css">
 .edit_form {
   display: block;
-  margin: auto;
-  width: 86%;
-  margin-top: 20px;
-  
-  
+  margin:25px auto;
+  width: 86%;   
 }
 .edit_form div{
   background: #fff;
@@ -62,8 +59,9 @@ export default{
 .edit_form label{
   display: block;
 }
-.edit_sure{
-  width: 80%;
+.edit_form .edit_sure{
+  display: block;
+  width: 90%;
   margin: auto;
   margin-top: 40px;
   padding: 12px;

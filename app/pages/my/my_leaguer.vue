@@ -3,7 +3,7 @@
 <header1 title="升级会员">
 <router-link to="/my" slot="left" class="iconfont icon-shangyige head_left">
  </router-link>
-<div slot="left" class="leaguer_right">充值</div>
+ <router-link to="/leag_pay" slot="left" class="leaguer_right">充值</router-link>
 </header1>
 <div class="leaguer_desc">
  会员等级说明<br/>
