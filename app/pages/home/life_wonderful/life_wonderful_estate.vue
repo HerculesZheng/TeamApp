@@ -1,5 +1,5 @@
 <template>
-	<div class="estate">
+	<div class="life_wonderful_estate">
 		<header1 title="详细信息">
 			<router-link to="/life_wonderful" slot="left" class="iconfont icon-shangyige arrow-left"></router-link>
 		</header1>
@@ -32,7 +32,7 @@
 </script>
 
 <style type="text/css" lang="less">
-	.estate{
+	.life_wonderful_estate{
 		.house-information{
 			background: white;
 			margin-bottom: 10px;

@@ -15,11 +15,11 @@
 			</li>
 			<li class="describe">
 				<p>需求描述：</p>
-				<textarea rows="10" cols="50" placeholder="请根据需求类型，输入详细的合作模式（如：商品入驻，请注明具体商品、数量等），平台会在第一时间与您进行沟通联系。">	
+				<textarea rows="7" cols="50" placeholder="请根据需求类型，输入详细的合作模式（如：商品入驻，请注明具体商品、数量等），平台会在第一时间与您进行沟通联系。">	
 				</textarea>
-				<p class="presentingBank">需求提交后，平台会在第一时间与您联系。</p>
+				<p class=" presentingBank"> <span class="iconfont icon-tishi "></span>需求提交后，平台会在第一时间与您联系。</p>
 			</li>
-			<li><button>提交</button></li>
+			<li class="btn"><button>提交</button></li>
 		</ul>
 	</div>
 	
@@ -64,7 +64,24 @@
 				height: 45px;
 				line-height: 45px;
 			}
-			button{
+			
+			/*联系信息*/
+			.contact{
+				p{
+					margin-top:10px;
+				}
+			}
+
+			/*提示信息*/
+			.icon-tishi{
+				color: #f29004;
+				margin-right: 1.5%;
+			}
+			
+			.btn{
+				margin-top:50px;
+				margin-bottom: 36px;
+				button{
 				width:100%;
 				height: 45px;
 				font-size: 18px;
@@ -72,7 +89,9 @@
 				background: #f29004;
 				border: 0;
 
+				}
 			}
+			
 			
 		}
 

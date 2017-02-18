@@ -1,6 +1,5 @@
-import Vue from 'vue';
-import VueRouter from  'vue-router';
-
+import Vue from "vue";
+import VueRouter from "vue-router";
 
 import App from "./app.vue";
 import Home from './pages/home/home.vue';
@@ -56,12 +55,15 @@ import Life_home_article from "./pages/home/life_home/life_home_article.vue";
 
 Vue.use(VueRouter)
 
+
 const auth={
   isLoggedIn:true,
   account:"",
   name:"",
   phoneNumber:""
 }
+
+Vue.use(VueRouter)
 
 const router = new VueRouter({
 	// mode:'history',
@@ -99,8 +101,14 @@ const router = new VueRouter({
       {path:"/changePwd",component:ChangePwd}
     ]
 })
-// 指定一开始加载的页面
-// router.push("class");
+
+
+// const router2 = new VueRouter({
+// 	{path:"/life_service",component:Life_service},
+// })
+
+//指定开始加载页面  
+// router.push("search");
 
 router.beforeEach((to,from,next)=>{
   if (to.matched.some(record=>record.meta.requiresAuth)) {
@@ -118,6 +126,30 @@ router.beforeEach((to,from,next)=>{
 })
 
 new Vue({
-    router,
-    render:h=>h(App)
+	router,
+	// router2,
+	render:h=>h(App),
 }).$mount("#app")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
