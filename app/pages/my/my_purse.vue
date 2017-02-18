@@ -3,7 +3,7 @@
 <header1 title="我的钱包">
 <router-link to="/my" slot="left" class="iconfont icon-shangyige head_left">
  </router-link>
-<div slot="left" class="purse_right">账单</div>
+<router-link to="/bill" slot="left" class="purse_right">账单</router-link>
 </header1>
 <ul class="purse_box">
   <li><img src="./img/purse.png"></li>
@@ -27,7 +27,9 @@
    </label>
   </li>
 </ul>
+<router-link to="/zhi_add">
 <input type="submit" value="充值" class="tijiao" />
+  </router-link>
 </form>
 <div class="bottom_mark"></div>
 </div>
@@ -45,6 +47,7 @@ export default{
 .purse_right{
   float: right;
   padding: 0 14px;
+  color: #fff;
 }
 .purse_box{
   padding: 50px 0;
@@ -97,9 +100,10 @@ export default{
   display: block;
   color: #fff;
   font-size: 16px;
-  padding: 16px 160px;
+  padding: 14px 160px;
   margin: 60px auto;
   background: #26c08a;
+  border: 1px solid #dbdbdb;
   border-radius: 6px;
 }
 </style>
