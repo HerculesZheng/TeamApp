@@ -33,7 +33,7 @@ module.exports = {
 	devServer: {
 	  contentBase:"./www",
       inline: true,
-      port: 8010
+      port: 8030
     },
 	plugins:[
 		new html({

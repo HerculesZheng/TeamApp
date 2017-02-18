@@ -2,11 +2,34 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 
 import App from "./app.vue";
-import Home from "./pages/home/home.vue";
-import Member from "./pages/member/member.vue";
-import Class from "./pages/class/class.vue";
-import Shop from "./pages/shop/shop.vue";
-import My from "./pages/my/my.vue";
+import Home from './pages/home/home.vue';
+import Member from './pages/member/member.vue';
+import Class from './pages/class/class.vue';
+// import Shop from './pages/shop/shop.vue';
+import Cart from "./pages/cart/cart.vue";
+
+import Login from "./pages/account/login.vue";
+import Register from "./pages/account/register.vue";
+import ChangePwd from "./pages/account/changePwd.vue";
+
+import My from './pages/my/my.vue';
+// import My_login from './pages/my/my_login.vue';
+import My_message from './pages/my/my_message.vue';
+import My_order from './pages/my/my_order.vue';
+import My_collection from './pages/my/my_collection.vue';
+import My_purse from './pages/my/my_purse.vue';
+import My_address from './pages/my/my_address.vue';
+import My_leaguer from './pages/my/my_leaguer.vue';
+import My_more from './pages/my/my_more.vue';
+import Mes_name from './pages/my/mes_name.vue';
+import Mes_contact from './pages/my/mes_contact.vue';
+import Contact_edit from './pages/my/contact_edit.vue';
+import Mes_changepass from './pages/my/mes_changepass.vue';
+import Mes_changepurse from './pages/my/mes_changepurse.vue';
+import Offer from './pages/my/mes_offer.vue';
+import Bill from './pages/my/purse_bill.vue';
+import Zhi_add from './pages/my/zhi_addmoney.vue';
+import Leag_pay from './pages/my/leag_pay.vue';
 
 import Area from "./pages/home/area.vue";
 import Search from "./pages/home/search.vue";
@@ -38,7 +61,7 @@ const router = new VueRouter({
 		{path:"/",component:Home},
 		{path:"/member",component:Member},
 		{path:"/class",component:Class},
-		{path:"/shop",component:Shop},
+		{path:"/cart",component:Cart},
 		{path:"/my",component:My},
 		{path:"/area",component:Area},
 		{path:"/search",component:Search},
