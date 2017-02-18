@@ -1,14 +1,14 @@
 <template>
-	<div class="food_detail">
+	<div class="life_home_article">
 		<header1 title="商品详情">
-			<router-link to="/life_food" slot="left" class="iconfont icon-shangyige arrow-left"></router-link>
-			<router-link to="/life_food" slot="left" class="iconfont icon-shoucang collect"></router-link>
+			<router-link to="/life_home" slot="left" class="iconfont icon-shangyige arrow-left"></router-link>
+			<router-link to="/life_home" slot="left" class="iconfont icon-shoucang collect"></router-link>
 			<span slot="left" class="iconfont icon-share01 share" ></span>
 		</header1>
-		<div class="food_information">
-			<img src="./img/food_detial01.jpg">
+		<div class="life_home_information">
+			<img src="./img/article_big01.jpg">
 			<div>
-				<h3>薯条点心面休闲零食五味园  小包装500g</h3>
+				<h3>沃之沃 多功能内衣袜子内裤收纳盒内衣盒六件套</h3>
 				<div class="price">
 					<span class="currentPrice">￥ 11.5</span>
 					<span class="originalCost">原价：¥ 12.8</span>
@@ -38,7 +38,7 @@
 		</ul>
 
 		<div class="shareDetail">
-			<div>
+			<!-- <div>
 				<p>分享到</p>
 				<div>
 					<img src="./img/weixin.png">
@@ -53,7 +53,7 @@
 					<span>新浪微博</span>
 				</div>
 				<p class="cancel">取消</p>
-			</div>
+			</div> -->
 		</div>
 
 	</div>
@@ -91,7 +91,7 @@
 </script>
 
 <style type="text/css" lang="less">
-	.food_detail{
+	.life_home_article{
 		.collect,.share{
 			font-size: 24px;
 			color: white;
@@ -103,7 +103,7 @@
 		}
 
 		/*食物价格与销量*/
-		.food_information{
+		.life_home_information{
 			font-size: 13px;
 			
 			img{
