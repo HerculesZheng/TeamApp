@@ -48,6 +48,12 @@ import Life_wonderful_estate from "./pages/home/life_wonderful/life_wonderful_es
 //商品详情
 import Food_detail from "./pages/home/life_food/food_detail.vue";
 
+//生活用品详情页
+import Article_detail from "./pages/home/life_article/article_detail.vue";
+
+//生活家居详情页life_home_article.vue
+import Life_home_article from "./pages/home/life_home/life_home_article.vue";
+
 Vue.use(VueRouter)
 
 const auth={
@@ -86,6 +92,8 @@ const router = new VueRouter({
       {path:"/life_service",component:Life_service},
       {path:"/life_wonderful_estate",component:Life_wonderful_estate},
       {path:"/food_detail",component:Food_detail},
+      {path:"/article_detail",component:Article_detail},
+      {path:"/life_home_article",component:Life_home_article},
       // {path:"/login",component:Login},
       {path:"/register",component:Register},
       {path:"/changePwd",component:ChangePwd}
