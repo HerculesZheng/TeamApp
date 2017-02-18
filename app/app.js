@@ -53,6 +53,13 @@ import Article_detail from "./pages/home/life_article/article_detail.vue";
 //生活家居详情页life_home_article.vue
 import Life_home_article from "./pages/home/life_home/life_home_article.vue";
 
+const auth={
+  isLoggedIn:true,
+  account:"",
+  name:"",
+  phoneNumber:""
+}
+
 Vue.use(VueRouter)
 
 const router = new VueRouter({
@@ -61,8 +68,20 @@ const router = new VueRouter({
 		{path:"/",component:Home},
 		{path:"/member",component:Member},
 		{path:"/class",component:Class},
-		{path:"/cart",component:Cart},
-		{path:"/my",component:My},
+		// {path:"/shop",component:Shop},
+		{path:"/cart",component:Cart,meta:{requiresAuth:true}},
+		{path:"/my",component:My,meta:{requiresAuth:true}},
+		{path:"/login",component:Login},
+		{path:"/message",component:My_message},
+		{path:"/order",component:My_order},
+		{path:"/collection",component:My_collection},
+		{path:"/address",component:My_address},
+		{path:"/purse",component:My_purse},
+		{path:"/leaguer",component:My_leaguer},
+		{path:"/more",component:My_more},
+		{path:"/mes_name",component:Mes_name},
+		{path:"/mes_contact",component:Mes_contact}, 
+		{path:"/contact_edit",component:Contact_edit}, 
 		{path:"/area",component:Area},
 		{path:"/search",component:Search},
 		{path:"/life_wonderful",component:Life_wonderful},
@@ -74,6 +93,9 @@ const router = new VueRouter({
 		{path:"/food_detail",component:Food_detail},
 		{path:"/article_detail",component:Article_detail},
 		{path:"/life_home_article",component:Life_home_article},
+		// {path:"/login",component:Login},
+		{path:"/register",component:Register},
+		{path:"/changePwd",component:ChangePwd}
 	]
 })
 
@@ -85,6 +107,20 @@ const router = new VueRouter({
 //指定开始加载页面  
 // router.push("search");
 
+router.beforeEach((to,from,next)=>{
+  if (to.matched.some(record=>record.meta.requiresAuth)) {
+    if (!auth.isLoggedIn) {
+      next({
+        path:"/login",
+        query:{redirect:to.fullPath}
+      })
+    }else {
+      next()
+    }
+  }else{
+    next()
+  }
+})
 
 new Vue({
 	router,
