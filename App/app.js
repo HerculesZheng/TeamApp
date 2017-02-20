@@ -24,14 +24,32 @@ import Offer from './pages/my/mes_offer.vue';
 import Bill from './pages/my/purse_bill.vue';
 import Zhi_add from './pages/my/zhi_addmoney.vue';
 import Leag_pay from './pages/my/leag_pay.vue';
-
-
+import Leag_ok from './pages/my/leag_ok.vue';
+import About from './pages/my/about_we.vue';
+import Help from './pages/my/more_help.vue';
+import Suggest from './pages/my/suggest.vue';
+import Problem from './pages/my/com_problem.vue';
+import Address_edit from './pages/my/address_edit.vue';
+import Add_address from './pages/my/add_address.vue';
+import Collect_edit from './pages/my/collect_edit.vue';
+import Wait_fahuo from './pages/my/wait_fahuo.vue';
+import Wait_shouhuo from './pages/my/wait_shouhuo.vue';
+import Order_over from './pages/my/order_over.vue';
+import After_sale from './pages/my/after_sale.vue';
+import Go_zhifu from './pages/my/go_zhifu.vue';
+import Pay_yes from './pages/my/pay_yes.vue';
+import Sure_shop from './pages/my/sure_shop.vue';
+import Shouhuo_ok from './pages/my/shouhuo_ok.vue';
+import Go_comments from './pages/my/go_comments.vue';
+import Comment_ok from './pages/my/comments_ok.vue';
+import Yi_comments from './pages/my/yi_comments.vue';
 
 Vue.use(VueRouter)
 
 const router = new VueRouter({
 	// mode:'history',
     routes:[
+      // {path:"/",redirect:"/home"},
       {path:"/",component:Home},
       {path:"/member",component:Member},
       {path:"/class",component:Class},
@@ -54,6 +72,25 @@ const router = new VueRouter({
       {path:"/bill",component:Bill},
       {path:"/zhi_add",component:Zhi_add},
       {path:"/leag_pay",component:Leag_pay},
+      {path:"/leag_ok",component:Leag_ok},
+      {path:"/about",component:About},
+      {path:"/help",component:Help},
+      {path:"/suggest",component:Suggest},
+      {path:"/problem",component:Problem},
+      {path:"/address_edit",component:Address_edit},
+      {path:"/add_address",component:Add_address},
+      {path:"/collect_edit",component:Collect_edit},
+      {path:"/wait_fahuo",component:Wait_fahuo},
+      {path:"/wait_shouhuo",component:Wait_shouhuo},
+      {path:"/order_over",component:Order_over},
+      {path:"/after_sale",component:After_sale},
+      {path:"/go_zhifu",component:Go_zhifu},
+      {path:"/pay_yes",component:Pay_yes},
+      {path:"/sure_shop",component:Sure_shop},
+      {path:"/shouhuo_ok",component:Shouhuo_ok},
+      {path:"/go_comments",component:Go_comments},
+      {path:"/comments_ok",component:Comment_ok},
+      {path:"/yi_comments",component:Yi_comments},
     ]
 })
 // 指定一开始加载的页面

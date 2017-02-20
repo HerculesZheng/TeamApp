@@ -20,7 +20,6 @@
 </div>
 <span class="tip">注意：密码不得填空格，可由英文字母和数字组成</span>
 <label><input class="pass_sure" type="submit" name="" value="确定"></label>
-<!-- <input class="pass_sure" type="submit" name="" value="确定"> -->
 </form>
 <div class="bottom_mark"></div>
 </div>
@@ -61,7 +60,7 @@ export default{
 .pass_form label input{
   padding: 12px;
   border: none;
-  width: 60%;
+  width: 50%;
   font-size: 16px;
   margin-left: 30px;
 }

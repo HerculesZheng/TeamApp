@@ -1,8 +1,7 @@
 <template>
 <div class="my_address">
 <header1 title="收货地址">
-<router-link to="/my" slot="left" class="iconfont icon-shangyige head_left">
- </router-link>
+<router-link to="/my" slot="left" class="iconfont icon-shangyige head_left"></router-link>
 </header1>
 <div class="address_box">
 <ul>
@@ -15,7 +14,7 @@
     <span>广州市天河区东圃时代TIT广场</span>
   </li>
 </ul>
-<span class="iconfont icon-next iconfont_right next"></span> 
+<router-link to="/address_edit" slot="left" class="iconfont icon-next iconfont_right next"></router-link>
 </div>
 <div class="address_box">
 <ul>
@@ -29,6 +28,9 @@
 </ul>
 <span class="iconfont icon-next iconfont_right next"></span> 
 </div>
+<router-link to="/add_address">
+<span class="new_address">新增收货地址</span>
+</router-link>
 <div class="bottom_mark"></div>
 </div>
 </template>
@@ -66,6 +68,20 @@ export default{
 .address_box .next{
   line-height: 90px;
   padding-left:20px;
+  color: #cccccc;
+}
+.new_address{
+  display: block;
+  width: 70%;
+  padding: 12px;
+  background: #f29004;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 51px;
+  left: 15%;
 }
 </style>
 
