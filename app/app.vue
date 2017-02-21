@@ -34,11 +34,6 @@
 <style type="text/css" lang="less">
 @import './common/css/reset.css';
 @import './common/font/iconfont.css';
-html,body{
-	width: 100%;
-	font-size: 15px;
-	background: #f2f2f2;
-}
 .nav{
 	position: fixed;
 	bottom: 0;
