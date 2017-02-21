@@ -104,13 +104,11 @@
 
 <script type="text/javascript">
 import Header1 from '../../component/header/header.vue';
-import $ from "../../common/js/jQuery-3.1.1.min.js";
 export default{
 	components:{
 		Header1
-	}
-};
-  $(function(){
+	},
+  mounted:function(){  
     $(".shenqing").click(function(){
       $(".tuikuan_mark").show();
       $(".tuikuan_panel").show();
@@ -123,7 +121,8 @@ export default{
       $(".tuikuan_mark").hide();
       $(".tuikuan_panel").hide();
     });
-  })
+  }
+  }
 </script>
 <style type="text/css">
 .shouhuo_ok ul{

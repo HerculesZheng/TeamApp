@@ -48,9 +48,10 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
 	// mode:'history',
+   linkActiveClass:"nav_active",
     routes:[
-      // {path:"/",redirect:"/home"},
-      {path:"/",component:Home},
+      {path:"/",redirect:"/home"},
+      {path:"/home",component:Home},
       {path:"/member",component:Member},
       {path:"/class",component:Class},
       {path:"/shop",component:Shop},
@@ -94,7 +95,7 @@ const router = new VueRouter({
     ]
 })
 // 指定一开始加载的页面
-// router.push("class");
+// router.push("home");
 
 new Vue({
     router,
