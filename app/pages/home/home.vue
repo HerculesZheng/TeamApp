@@ -20,7 +20,7 @@
 			</div>
 			<!-- 生活 -->
 			<div class="life" >
-				<router-link to="/life_wonderful" class="life_wonderful">
+				<router-link to="/life_wonderful" class="wonderful">
 					<h2>精彩生活</h2>
 					<p>会员专享</p>
 				</router-link>
@@ -39,7 +39,7 @@
 						<p>为生活 享生活</p>
 					</router-link>
 					<router-link to="/life_service" class="life_service">
-					<div class="life_service">
+					
 						<h2>一键客服</h2>
 						<p>为生活 更贴心</p>
 					</router-link>
@@ -60,9 +60,6 @@
 <script type="text/javascript">
   	import Swiper from "../../common/js/swiper-3.4.1.min.js";
 	import Header1 from '../../component/header/header.vue';
-
-
-// import Swiper() from 
 
 	export default{
 		components:{
@@ -94,11 +91,7 @@
 				// autoplayDisableOnInteraction : true,
 				pagination: '.swiper-pagination',
 			})
-		}
-            
-              
-            
-       
+		} 
 	}
 </script>
 <style type="text/css" lang="less">
@@ -150,7 +143,7 @@
 				margin-bottom: 7px;
 				display: flex;
 				font-size: 12px;
-				.life_wonderful{
+				.wonderful{
 					width: 29.87%;
 					background: url(./img/life_wondeful.jpg) no-repeat;
 					background-size: 100%;
@@ -270,3 +263,19 @@
 
 
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

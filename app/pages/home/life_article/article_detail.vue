@@ -1,14 +1,14 @@
 <template>
-	<div class="food_detail">
+	<div class="article_detail">
 		<header1 title="商品详情">
-			<router-link to="/life_food" slot="left" class="iconfont icon-shangyige arrow-left"></router-link>
-			<router-link to="/life_food" slot="left" class="iconfont icon-shoucang collect"></router-link>
+			<router-link to="/life_article" slot="left" class="iconfont icon-shangyige arrow-left"></router-link>
+			<router-link to="/life_article" slot="left" class="iconfont icon-shoucang collect"></router-link>
 			<span slot="left" class="iconfont icon-share01 share" ></span>
 		</header1>
-		<div class="food_information">
-			<img src="./img/food_detial01.jpg">
+		<div class="article_information">
+			<img src="./img/article_detial01.jpg">
 			<div>
-				<h3>薯条点心面休闲零食五味园  小包装500g</h3>
+				<h3>舒客牙膏爽清清火防蛀   超值4支装 </h3>
 				<div class="price">
 					<span class="currentPrice">￥ 11.5</span>
 					<span class="originalCost">原价：¥ 12.8</span>
@@ -37,7 +37,7 @@
 			<li class="nowShopping">立即购买</li>
 		</ul>
 
-		<div class="shareDetail">
+	<!-- 	<div class="shareDetail">
 			<div>
 				<p>分享到</p>
 				<div>
@@ -54,7 +54,7 @@
 				</div>
 				<p class="cancel">取消</p>
 			</div>
-		</div>
+		</div> -->
 
 	</div>
 	
@@ -62,7 +62,7 @@
 
 <script type="text/javascript">
 	import Header1 from '../../../component/header/header.vue';
-	import $ from '../../../common/js/jQuery-3.1.1.min.js';
+	import $ from '../../../common/js/jquery-3.1.1.min.js';
 	export default{
 		components:{
 			Header1
@@ -91,7 +91,7 @@
 </script>
 
 <style type="text/css" lang="less">
-	.food_detail{
+	.article_detail{
 		.collect,.share{
 			font-size: 24px;
 			color: white;
@@ -103,7 +103,7 @@
 		}
 
 		/*食物价格与销量*/
-		.food_information{
+		.article_information{
 			font-size: 13px;
 			
 			img{

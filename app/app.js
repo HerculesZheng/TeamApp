@@ -1,6 +1,5 @@
-import Vue from 'vue';
-import VueRouter from  'vue-router';
-
+import Vue from "vue";
+import VueRouter from "vue-router";
 
 import App from "./app.vue";
 
@@ -21,8 +20,12 @@ import Food_detail from "./pages/home/life_food/food_detail.vue";
 
 import Member from './pages/member/member.vue';
 import Class from './pages/class/class.vue';
+
 // import Shop from './pages/shop/shop.vue';
-import Cart from "./pages/cart/cart.vue";
+import Cart from "./pages/cart/cartTemplate.vue";
+import CartHome from "./pages/cart/cart.vue";
+import OrderConfirm from "./pages/cart/orderConfirm.vue";
+import PaySuccess from "./pages/cart/paySuccess.vue";
 
 import Login from "./pages/account/login.vue";
 import Register from "./pages/account/register.vue";
@@ -73,7 +76,14 @@ import Yi_comments from './pages/my/yi_comments.vue';
 
 
 
+//生活用品详情页
+import Article_detail from "./pages/home/life_article/article_detail.vue";
+
+//生活家居详情页life_home_article.vue
+import Life_home_article from "./pages/home/life_home/life_home_article.vue";
+
 Vue.use(VueRouter)
+
 
 const auth={
   isLoggedIn:true,
@@ -81,6 +91,8 @@ const auth={
   name:"",
   phoneNumber:""
 }
+
+Vue.use(VueRouter)
 
 const router = new VueRouter({
 	// mode:'history',
@@ -91,9 +103,23 @@ const router = new VueRouter({
       {path:"/member",component:Member},
       {path:"/class",component:Class},
       // {path:"/shop",component:Shop},
-      {path:"/cart",component:Cart,meta:{requiresAuth:true}},
+      {
+        path:"/cart",
+        component:Cart,
+        meta:{requiresAuth:true},
+        children:[
+          {path:"",component:CartHome},
+          {path:'orderConfirm',component:OrderConfirm},
+          {path:'paySuccess',component:PaySuccess}
+        ]
+      },
+      // {path:"/orderConfirm",component:OrderConfirm},
       {path:"/my",component:My,meta:{requiresAuth:true}},
-      {path:"/login",component:Login},
+      {path:"/login",component:Login,
+      children:[
+      {path:"register",component:Register},
+      {path:"changePwd",component:ChangePwd}
+      ]},
       {path:"/message",component:My_message},
       {path:"/order",component:My_order},
       {path:"/collection",component:My_collection},
@@ -114,6 +140,8 @@ const router = new VueRouter({
       {path:"/life_service",component:Life_service},
       {path:"/life_wonderful_estate",component:Life_wonderful_estate},
       {path:"/food_detail",component:Food_detail},
+      {path:"/article_detail",component:Article_detail},
+      {path:"/life_home_article",component:Life_home_article}
       // {path:"/login",component:Login},
       {path:"/register",component:Register},
       {path:"/changePwd",component:ChangePwd}
@@ -164,6 +192,7 @@ router.beforeEach((to,from,next)=>{
 })
 
 new Vue({
-    router,
-    render:h=>h(App)
+	router,
+	// router2,
+	render:h=>h(App),
 }).$mount("#app")
