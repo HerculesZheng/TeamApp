@@ -29,17 +29,15 @@
 
 			<!-- 右边详细信息 -->
 			<ul class="information">
-				<li v-for="i in msg">
-					<router-link to="/article_detail">
-						<img v-bind:src="i.img">
-						<div>
-							<h3>{{i.title}}</h3>
-							<p>
-								<span class="currentPrice">￥ {{i.currentPrice}}</span>
-								<span class="originalCost"> 原价:￥{{i.originalCost}}</span>
-							</p>
-						</div>
-					</router-link>
+				<li v-for="i in msg" @click="showDetail(i)">
+					<img v-bind:src="i.img">
+					<div>
+						<h3>{{i.title}}</h3>
+						<p>
+							<span class="currentPrice">￥ {{i.currentPrice}}</span>
+							<span class="originalCost"> 原价:￥{{i.originalCost}}</span>
+						</p>
+					</div>
 				</li>
 			</ul>
 		</div>
@@ -51,8 +49,6 @@
 
 <script type="text/javascript">
 	import Header1 from '../../../component/header/header.vue';
-	import $ from '../../../common/js/jquery-3.1.1.min.js';
-
 	export default{
 		components:{
 			Header1
@@ -257,16 +253,28 @@
 				}
 
 			},
+			showDetail:function(i){
+				this.$router.push({
+					name:"article_detail",
+					params:{
+						title:i.title,
+						currentPrice:i.currentPrice,
+						originalCost:i.originalCost,
+
+					}
+				})
+			}
 		},
 		mounted:function(){
 			this.msg = this.data[0].data;
 			$(".left-side-bar li").eq(0).css({"background":"#e6e6e6","color":"#f29004"});
-			var mySwiper = new Swiper('.swiper-container',{
-				autoplay : 3000,
-				loop:true,
-				// autoplayDisableOnInteraction : true,
-				pagination: '.swiper-pagination',
-			})
+			setTimeout(function(){
+				new Swiper('.swiper-container',{
+					autoplay : 3000,
+					loop:true,
+					pagination: '.swiper-pagination',
+				})
+			},1)
 		}
 
 	}

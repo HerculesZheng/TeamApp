@@ -84,8 +84,6 @@
 </template>
 
 <script type="text/javascript">
- import $ from "../../common/js/jquery-3.1.1.min.js";
-
 export default{
   mounted:function(){  
     $(".bottom_border").on("click",function(){ 

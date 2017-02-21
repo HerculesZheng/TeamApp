@@ -4,7 +4,7 @@
 			<router-view></router-view>
 		</div>
 		<div class="nav">
-			<router-link to="/home">
+			<router-link to="/home" class="active">
 				<span class="iconfont icon-shouye icon_text"></span>
 				<i class="me">首页</i>
 			</router-link>
@@ -32,7 +32,7 @@
 </script>
 
 <style type="text/css" lang="less">
-@import './common/css/reset.css';
+/*@import './common/css/reset.css';*/
 @import './common/font/iconfont.css';
 .nav{
 	position: fixed;
