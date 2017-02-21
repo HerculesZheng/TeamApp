@@ -161,9 +161,9 @@ const router = new VueRouter({
       {path:"/Life_home",component:Life_home},
       {path:"/life_service",component:Life_service},
       {path:"/life_wonderful_estate",component:Life_wonderful_estate},
-      {path:"/food_detail",component:Food_detail},
-      {path:"/article_detail",component:Article_detail},
-      {path:"/life_home_article",component:Life_home_article}
+      {name:"food_detail",path:"/food_detail",component:Food_detail},
+      {name:"article_detail",path:"/article_detail",component:Article_detail},
+      {name:"life_home_article",path:"/life_home_article",component:Life_home_article}
     ]
 })
 

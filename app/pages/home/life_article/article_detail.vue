@@ -1,8 +1,8 @@
 <template>
 	<div class="article_detail">
 		<header1 title="商品详情">
-			<router-link to="/life_food" slot="left" class="iconfont icon-shangyige arrow-left"></router-link>
-			<router-link to="/life_food" slot="left" class="iconfont icon-shoucang collect"></router-link>
+			<router-link to="/life_article" slot="left" class="iconfont icon-shangyige arrow-left"></router-link>
+			<router-link to="/life_article" slot="left" class="iconfont icon-shoucang collect"></router-link>
 			<span slot="left" class="iconfont icon-share01 share" ></span>
 		</header1>
 		<div class="food_information">
