@@ -42,20 +42,20 @@ module.exports = {
       	}
       }
     },
-    plugins:[
-        new html({
-        	title:"生活一家",
-        	template:__dirname+"/app/index.html",
-            filename:"index.html",
-        }),
-        new clean(["www/iconfont","www/images","www/js","www/index.html"]),
-        // new webpack.optimize.UglifyJsPlugin({
-        // 	compress:{
-        // 		warnings:false,//取消报错提示
-        // 	}
-        // })//压缩代码
-    ],
-    resolve:{
+	plugins:[
+		new html({
+			title:"生活一家",
+			template:__dirname+"/app/index.html",
+			filename:"index.html",
+		}),
+		new clean(["www/js","www/images"]),
+		// new webpack.optimize.UglifyJsPlugin({
+		// 	compress:{
+		// 		warnings:false,//取消报错提示
+		// 	}
+		// })//压缩代码
+	],
+	resolve:{
 		alias:{
 			'vue$': 'vue/dist/vue.common.js'
 		}

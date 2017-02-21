@@ -22,8 +22,8 @@ import Member from './pages/member/member.vue';
 import Class from './pages/class/class.vue';
 
 // import Shop from './pages/shop/shop.vue';
-import Cart from "./pages/cart/cartTemplate.vue";
-import CartHome from "./pages/cart/cart.vue";
+import Template from "./component/emptyView/emptyView.vue";
+import Cart from "./pages/cart/cart.vue";
 import OrderConfirm from "./pages/cart/orderConfirm.vue";
 import PaySuccess from "./pages/cart/paySuccess.vue";
 
@@ -86,7 +86,7 @@ Vue.use(VueRouter)
 
 
 const auth={
-  isLoggedIn:true,
+  isLoggedIn:false,
   account:"",
   name:"",
   phoneNumber:""
@@ -105,18 +105,19 @@ const router = new VueRouter({
       // {path:"/shop",component:Shop},
       {
         path:"/cart",
-        component:Cart,
+        component:Template,
         meta:{requiresAuth:true},
         children:[
-          {path:"",component:CartHome},
+          {path:"",component:Cart},
           {path:'orderConfirm',component:OrderConfirm},
           {path:'paySuccess',component:PaySuccess}
         ]
       },
       // {path:"/orderConfirm",component:OrderConfirm},
       {path:"/my",component:My,meta:{requiresAuth:true}},
-      {path:"/login",component:Login,
+      {path:"/login",component:Template,
       children:[
+      {path:"",component:Login},
       {path:"register",component:Register},
       {path:"changePwd",component:ChangePwd}
       ]},
@@ -141,10 +142,10 @@ const router = new VueRouter({
       {path:"/life_wonderful_estate",component:Life_wonderful_estate},
       {path:"/food_detail",component:Food_detail},
       {path:"/article_detail",component:Article_detail},
-      {path:"/life_home_article",component:Life_home_article}
+      {path:"/life_home_article",component:Life_home_article},
       // {path:"/login",component:Login},
       {path:"/register",component:Register},
-      {path:"/changePwd",component:ChangePwd}
+      {path:"/changePwd",component:ChangePwd},
 
       {path:"/changepass",component:Mes_changepass},
       {path:"/changepurse",component:Mes_changepurse},

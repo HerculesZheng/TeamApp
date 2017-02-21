@@ -29,17 +29,15 @@
 
 			<!-- 右边详细信息 -->
 			<ul class="information">
-				<li v-for="i in msg">
-					<router-link to="/life_home_article">
-						<img v-bind:src="i.img">
-						<div>
-							<h3>{{i.title}}</h3>
-							<p>
-								<span class="currentPrice">￥ {{i.currentPrice}}</span>
-								<span class="originalCost"> 原价:￥{{i.originalCost}}</span>
-							</p>
-						</div>
-					</router-link>
+				<li v-for="i in msg" @click="showDetail(i)">
+					<img v-bind:src="i.img">
+					<div>
+						<h3>{{i.title}}</h3>
+						<p>
+							<span class="currentPrice">￥ {{i.currentPrice}}</span>
+							<span class="originalCost"> 原价:￥{{i.originalCost}}</span>
+						</p>
+					</div>
 				</li>
 			</ul>
 		</div>
@@ -51,9 +49,6 @@
 
 <script type="text/javascript">
 	import Header1 from '../../../component/header/header.vue';
-	import $ from '../../../common/js/jquery-3.1.1.min.js';
-    
-   
 	export default{
 		components:{
 			Header1
@@ -240,7 +235,7 @@
 				var lis = $(".left-side-bar li");
 				for (var j = 0; j < lis.length; j++) {
 					if(j == i){
-						lis.eq(j).css({"background":"#e6e6e6","color":"#f29004"})
+						lis.eq(j).css({"background":"#e6e6e6","color":"#f29004"});
 						$(".life_home .line").animate({
 							top:$(".life_home .line").height()*j + "px",
 						},200)
@@ -250,19 +245,28 @@
 				}
 
 			},
+			showDetail:function(i){
+				this.$router.push({
+					name:"life_home_article",
+					params:{
+						title:i.title,
+						currentPrice:i.currentPrice,
+						originalCost:i.originalCost,
+					}
+				})
+			}
 			
-
-
 		},
 		mounted:function(){
 			this.msg = this.data[0].data;
 			$(".left-side-bar li").eq(0).css({"background":"#e6e6e6","color":"#f29004"});
-			var mySwiper = new Swiper('.swiper-container',{
-				autoplay : 3000,
-				loop:true,
-				// autoplayDisableOnInteraction : true,
-				pagination: '.swiper-pagination',
-			})
+			setTimeout(function(){
+				new Swiper('.swiper-container',{
+					autoplay : 3000,
+					loop:true,
+					pagination: '.swiper-pagination',
+				})
+			},1)
 		}
 
 	}
@@ -280,6 +284,7 @@
 		}
 		/*左边商家导航栏*/
 		.left-side-bar{
+
 			width: 28%;
 			float: left;
 			position: relative;
@@ -308,6 +313,7 @@
 			width: 72%;
 			float: right;
 			background: white;
+			overflow-y: scroll;
 			li{
 				height: 90px;
 				margin:10px 5% 20px;

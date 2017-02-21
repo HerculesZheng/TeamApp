@@ -61,7 +61,7 @@
 </script>
 
 <style type="text/css" lang="less">
-	@import '../../common/css/reset.css';
+	/*@import '../../common/css/reset.css';*/
 
 	.big_img{		
 		img{
