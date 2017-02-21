@@ -32,7 +32,8 @@
 			<input type="checkbox" id="chkAll" v-model="chkall" v-on:change="select_All()">
 			<label for="chkAll">全选</label>
 			<p id="totalPrice" v-show="selected">合计￥{{totalPrice}}(不含运费)</p>
-			<button id="btnCommit">{{isedit?"删除":"结算"}}</button>
+			<button id="btnDelete" v-if="isedit">删除</button>
+			<router-link to="/cart/orderConfirm">结算</router-link>
 		</div>
 	</div>
 

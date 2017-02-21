@@ -58,7 +58,7 @@
 	</div>
 </template>
 <script type="text/javascript">
-  	import Swiper from "../../common/js/swiper-3.4.1.min.js";
+  	// import Wper from "../../common/js/swiper-3.4.1.min.js";
 	import Header1 from '../../component/header/header.vue';
 
 	export default{
@@ -85,18 +85,25 @@
 			}
 		},
 		mounted:function(){
-			var mySwiper = new Swiper('.swiper-container',{
-				autoplay : 3000,
-				loop:true,
-				// autoplayDisableOnInteraction : true,
-				pagination: '.swiper-pagination',
-			})
-		} 
+			setTimeout(function(){
+				new Swiper('.swiper-container',{
+					autoplay : 3000,
+					loop:true,
+					pagination: '.swiper-pagination',
+				})
+			},1)
+		},
+		updated:function(){
+
+			// var mySwiper = new Swiper('.swiper-container',{
+			// 	autoplay : 3000,
+			// 	loop:true,
+			// 	pagination: '.swiper-pagination',
+			// })
+		}
 	}
 </script>
 <style type="text/css" lang="less">
-@import "../../common/css/swiper-3.4.1.min.css";
-@import "../../common/css/reset.css";
 	/*头部样式*/
 	.home{
 		.header{

@@ -8,10 +8,10 @@
 		<div class="life_home_information">
 			<img src="./img/article_big01.jpg">
 			<div>
-				<h3>沃之沃 多功能内衣袜子内裤收纳盒内衣盒六件套</h3>
+				<h3>{{$route.params.title}}</h3>
 				<div class="price">
-					<span class="currentPrice">￥ 11.5</span>
-					<span class="originalCost">原价：¥ 12.8</span>
+					<span class="currentPrice">￥ {{$route.params.currentPrice}}</span>
+					<span class="originalCost">原价：¥ {{$route.params.originalCost}}</span>
 					<span class="salesVolume">销量：1235</span>
 				</div>
 				<div>
@@ -22,11 +22,21 @@
 		</div>
 		<div class="goods_appraise">
 			<ul class="title">
-				<li class="goods">商品详情</li>
-				<li class="appraise">用户评价</li>
+				<li class="goods" @click="showGoods">商品详情</li>
+				<li class="appraise" @click="showAppraise">用户评价</li>
+				<li class="line"></li>
 			</ul>
 			<ul class="goods_appraise_contents">
-				<li>详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容详细内容</li>
+				<li class="goods_li" v-show="a">
+					<img v-bind:src="imgs">
+				</li>
+				<li class="appraise_content" v-show="b">
+					<div v-for="key in content">
+						<p>{{key.seller}}</p>
+						<p class="time">{{key.time}}</p>
+						<h4>{{key.con}}</h4>
+					</div>
+				</li>
 			</ul>
 		</div>
 
@@ -62,18 +72,70 @@
 
 <script type="text/javascript">
 	import Header1 from '../../../component/header/header.vue';
-	import $ from '../../../common/js/jquery-3.1.1.min.js';
 	export default{
 		components:{
 			Header1
 		},
-		// methods:{
-		// 	share:function(){
-		// 		var shareDetail = document.getElementsByClassName("shareDetail")[0];
-		// 		shareDetail.style.display = "block";
-		// 	}
-		// }
+		data(){
+			return {
+				a:true,
+				b:false,
+				imgs:require("./img/home_pot01.jpg"),
+				content:[
+					{
+						seller:"15123313",
+						time:"2016.1.1",
+						con:"商品很好，发货速度很快，很满意！",
+					},
+					{
+						seller:"15123313",
+						time:"2017.2.1",
+						con:"商品很好，很满意！",
+					},
+					{
+						seller:"15123313",
+						time:"2014.3.1",
+						con:"商品很好，发货速度很快，很满意！",
+					},
+					{
+						seller:"15123313",
+						time:"2015.6.1",
+						con:"发货速度很快，很满意！",
+					},
+				]
+
+			}
+		},
+		methods:{
+			// share:function(){
+			// 	var shareDetail = document.getElementsByClassName("shareDetail")[0];
+			// 	shareDetail.style.display = "block";
+			// }
+			showGoods:function(){
+				this.a = true;
+				this.b = false;
+				// $(".goods_li").css({"display":"block","marginBottom":"60px"});
+				// $(".appraise_content").css({"display":"none",});
+				$(".goods_appraise .line").animate({
+					width:"49%",
+					left:0,
+				})
+			},
+			showAppraise:function(){
+				this.b = true;
+				this.a = false;
+				// $(".appraise_content").css({"display":"block"});
+				// $(".goods_li").css({"display":"none"});
+				var h = $(".appraise_content").height();
+				$(".goods_appraise_contents").css({"height":h})
+				$(".goods_appraise .line").animate({
+					width:"51%",
+					left:"49%",
+				})
+			}
+		},
 		mounted:function(){  
+
 				// 分享到
 				$(".food_detail .share").on("click",function(){
 					$(".shareDetail").slideDown(300);
@@ -83,9 +145,7 @@
 				$(".food_detail .cancel").on("click",function(){
 					$(".shareDetail").slideUp(300);
 				});
-
 			}
-		
 
 	}
 </script>
@@ -116,7 +176,7 @@
 				h3{
 				font-size: 15px;
 				font-weight: normal;
-				margin:15px 0;
+				margin-bottom:10px;
 				}
 				.price{
 					margin-bottom: 10px;
@@ -149,6 +209,7 @@
 		.goods_appraise{
 			margin-top:10px;
 			background: white;
+			position: relative;
 			.title{
 				border-bottom:1px solid #e3e3e3;
 				li{
@@ -161,12 +222,66 @@
 				.goods{
 					border-right:1px solid #e3e3e3;
 				}
+				/*划线*/
+				.line{
+					height: 2px;
+					position: absolute;
+					background: #ff3b0e;
+					left:0;
+					top: 39px;
+				}
 
 			}
+
+
 			.goods_appraise_contents{
 				padding: 10px 2.67%;
+				position: relative;
+				/*商品内容图片*/
+				.goods_li{
+					img{
+						width: 100%;
+						display: block;
+					}
+				}
+				/*用户评价内容*/
+				.appraise_content{
+					width: 94.66%;
+					position: absolute;
+					top:10px;
+					left: 2.67%;
+					background:#f9d4d8;
+					box-sizing: content-box;
+					
+					>div{
+						width: 100%;
+						border-bottom: 1px solid #f5717e;
+						padding:0px 5px;
+						box-sizing: border-box;
+						overflow:hidden;
+						h4{
+							height:40px;
+							line-height: 40px;
+						}
+						p{
+							margin-top: 10px;
+							display: inline-block;
+							font-size: 14px;
+							color: #554748;
+						}
+						.time{
+							float: right;
+							color:#605f5f;
+						}
+					}
+				
+				}
 			}
+
 		}
+
+
+		/*购物车*/
 		.shoppingCar{
 			width: 100%;
 			height: 50px;
@@ -240,16 +355,8 @@
 			}
 			
 		}
-		
-		
-
-
-
-
-	
 
 	}
-
 </style>
 
 

@@ -53,7 +53,6 @@
 		
 	}
 </script>
-
 <style type="text/css" lang="less">
 	.arrow-left{
 		position: absolute;

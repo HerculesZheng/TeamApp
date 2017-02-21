@@ -1,16 +1,15 @@
 <template>
 	<div class="wrap">
 		<div class="content">
-			<router-view>
-			</router-view >
+			<router-view></router-view>
 		</div>
 		<div class="nav">
-			<router-link to="/home">
+			<router-link to="/home" class="active">
 				<span class="iconfont icon-shouye icon_text"></span>
 				<i class="me">首页</i>
 			</router-link>
 			<router-link to="/member">
-			<span class="iconfont icon-liwuhe icon_text"></span>
+				<span class="iconfont icon-liwuhe icon_text"></span>
 				<i class="me">会员</i>
 			</router-link>
 			<router-link to="/class">
@@ -31,8 +30,9 @@
 <script type="text/javascript" >
 
 </script>
+
 <style type="text/css" lang="less">
-@import './common/css/reset.css';
+/*@import './common/css/reset.css';*/
 @import './common/font/iconfont.css';
 .nav{
 	position: fixed;

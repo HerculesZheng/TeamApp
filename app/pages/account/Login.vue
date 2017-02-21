@@ -3,7 +3,9 @@
 <header1 title="登陆">
 <router-link to="/my" slot="left" class="iconfont icon-shangyige head_left">
  </router-link>
- <div slot="left" class="leaguer_right">注册</div>
+ <div slot="left" class="leaguer_right">
+ <router-link to="/login/register">注册</router-link>
+</div>
 </header1>
 <div class="log_img">
   <img src="../my/img/denglu.png">
@@ -17,7 +19,7 @@
    <label for="password" class="iconfont icon-suo"></label>
    <input type="" id="password" name="password" placeholder="请输入密码">
  </div>
- <a href="#">忘记密码?</a>
+ <router-link to="changePwd">忘记密码?</a>
  <span class="clear"></span>
  <button class="log_btn">登陆</button>
 </form>
@@ -30,7 +32,11 @@ import Header1 from '../../component/header/header.vue';
 export default{
 	components:{
 		Header1
-	}
+	},
+  methods:
+  {
+
+  }
 }
 </script>
 <style type="text/css">
