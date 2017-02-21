@@ -16,7 +16,7 @@
 				<span class="iconfont icon-fenlei icon_text"></span>
 				<i class="me">分类</i>
 			</router-link>
-			<router-link to="/shop">
+			<router-link to="/cart">
 				<span class="iconfont icon-gouwuche icon_text"></span>
 				<i class="me">购物车</i>
 			</router-link>
