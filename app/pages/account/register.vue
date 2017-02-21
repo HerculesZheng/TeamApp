@@ -14,7 +14,6 @@
 
 <script type="text/javascript">
 	import Heading from "../../component/header/header.vue";
-	import $ from "../../common/js/jquery-3.1.1.min.js";
 	export default{
 		components:{
 			Heading

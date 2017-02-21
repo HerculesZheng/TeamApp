@@ -80,7 +80,7 @@ import Comment_ok from './pages/my/comments_ok.vue';
 import Yi_comments from './pages/my/yi_comments.vue';
 
 const auth={
-  isLoggedIn:false,
+  isLoggedIn:true,
   account:"",
   name:"",
   phoneNumber:""
