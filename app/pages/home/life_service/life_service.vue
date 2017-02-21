@@ -27,7 +27,6 @@
 
 <script type="text/javascript">
 	import Header1 from '../../../component/header/header.vue';
-
 	export default{
 		components:{
 			Header1

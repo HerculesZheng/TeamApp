@@ -85,7 +85,7 @@
 </template>
 
 <script type="text/javascript">
- import $ from "../../common/js/jquery-3.1.1.min.js";
+ // import $ from "../../common/js/jquery-3.1.1.min.js";
 export default{
   mounted:function(){  
     $(".bottom_border").on("click",function(){ 
@@ -202,7 +202,7 @@ body{
   overflow: hidden;
   border-top: 1px solid #dbdbdb;
 }
-.other >li>a,div{
+.other >li>a,.other div{
   color: #1a1a1a;
 }
 .other >li a span{

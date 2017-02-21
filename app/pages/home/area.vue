@@ -7,14 +7,14 @@
 		</header1>
 		
 		<ul class="area-detail">
-			<li v-for="item in items">{{item.area}}</li>
+			<li v-for="(item,index) in items" @click="area(index)">{{item.area}}</li>
 		</ul>
 		
 	</div>
 </template>
 <script type="text/javascript">
 	import Header1 from '../../component/header/header.vue';
-
+    import china from '../../common/js/china.js';
 	export default{
 		components:{
 			Header1
@@ -37,12 +37,19 @@
 					{area:"深圳"},
 				]
 			}
-		}
+		},
+		methods:{
+			area:function(index){
+				console.log(china);
+			}
+		},
+		// mounted:function(){
+		// 	var newChina = new china()
+		// }
 		
 	}
 </script>
 <style type="text/css" lang="less">
-	@import "../../common/font/iconfont.css";
 	
 	.arrow-left{
 		float: left;

@@ -64,8 +64,10 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
 	// mode:"history",
+	linkActiveClass:"nav_active",
 	routes:[
-		{path:"/",component:Home},
+		{path:"/",redirect:"/home"},
+		{path:"/home",component:Home},
 		{path:"/member",component:Member},
 		{path:"/class",component:Class},
 		// {path:"/shop",component:Shop},
@@ -82,6 +84,7 @@ const router = new VueRouter({
 		{path:"/mes_name",component:Mes_name},
 		{path:"/mes_contact",component:Mes_contact}, 
 		{path:"/contact_edit",component:Contact_edit}, 
+		//home页面
 		{path:"/area",component:Area},
 		{path:"/search",component:Search},
 		{path:"/life_wonderful",component:Life_wonderful},
@@ -90,9 +93,11 @@ const router = new VueRouter({
 		{path:"/Life_home",component:Life_home},
 		{path:"/life_service",component:Life_service},
 		{path:"/life_wonderful_estate",component:Life_wonderful_estate},
-		{path:"/food_detail",component:Food_detail},
-		{path:"/article_detail",component:Article_detail},
-		{path:"/life_home_article",component:Life_home_article},
+		{name:"food_detail",path:"/food_detail",component:Food_detail},
+		{name:"article_detail",path:"/article_detail",component:Article_detail},
+		{name:"life_home_article",path:"/life_home_article",component:Life_home_article},
+		// home页面end
+
 		// {path:"/login",component:Login},
 		{path:"/register",component:Register},
 		{path:"/changePwd",component:ChangePwd}

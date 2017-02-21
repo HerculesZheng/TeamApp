@@ -41,7 +41,7 @@ module.exports = {
 			template:__dirname+"/app/index.html",
 			filename:"index.html",
 		}),
-		new clean(["www"]),
+		new clean(["www/js","www/images"]),
 		// new webpack.optimize.UglifyJsPlugin({
 		// 	compress:{
 		// 		warnings:false,//取消报错提示
