@@ -60,16 +60,17 @@ export default{
   display: block;
   padding: 0 10px;
   font-size: 14px;
+  overflow: hidden;
 }
 .purse_form label input{
   padding: 12px;
   border: none;
-  width: 60%;
+  width: 50%;
   font-size: 16px;
   margin-left: 30px;
 }
 .purse_form .text_width{
-  width: 30%;
+  width: 20%;
 }
 .purse_form .mar_one{
   margin-left: 44px;
@@ -87,7 +88,8 @@ export default{
   border-radius: 5px;
   padding: 6px;
   color: #fff;
-  margin-left: 30px;
+  float: right;
+  margin-top: 7px;
 }
 .purse_form .purse_sure{
   display: block;

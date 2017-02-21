@@ -40,10 +40,6 @@ export default{
 .zhifu_pay li{
   border-top: 1px solid #dbdbdb;
   line-height: 40px;
-  /*padding: 10px 0;*/
-  /*margin: 0px 10px;*/
-  /*line-height: 50px;*/
-  /*background: blue;*/
 }
 .zhifu_pay .zhi_img{
   display: inline-block;
@@ -64,7 +60,7 @@ export default{
   vertical-align: middle;
   color: #808080;
 }
-input::-webkit-input-placeholder{   
+.sum_money::-webkit-input-placeholder{   
    color: #1a1a1a;
 }  
 .zhifu_pay li input{
