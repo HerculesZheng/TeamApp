@@ -45,7 +45,7 @@ export default{
 .edit_form input{
   padding: 12px;
   border: none;
-  width: 60%;
+  width: 50%;
   font-size: 16px;
 }
 .edit_form span{

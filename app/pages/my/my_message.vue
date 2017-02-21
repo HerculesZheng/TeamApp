@@ -29,7 +29,7 @@
   </li>
   <li>
    <router-link to="/mes_contact">
-      <span>联系方式</span>
+      <span id="contact_type">联系方式</span>
       <span class="iconfont icon-next iconfont_right"></span>
       <span class="message_text">136****6688</span>
    </router-link>
@@ -96,6 +96,9 @@ export default{
 .message_top >li a span:nth-child(1){
   padding: 14px 50% 14px 10px;
 }
+#contact_type{
+  padding: 14px 20% 14px 10px;
+}
 .message_top .img_box{
   float: right;
   padding: 3px 0;
@@ -110,7 +113,7 @@ export default{
 }
 .message_top .message_logo{
   float: right;
-  padding: 12px 34px;
+  padding: 12px 20px;
 }
 .message_logo img{
   width: 28px;
@@ -135,7 +138,7 @@ export default{
   padding: 14px 10px;
 }
 .message_server >li a span:first-child{
-  padding: 14px 60% 14px 10px;
+  padding: 14px 50% 14px 10px;
 }
 .bottom_mark{
   width: 100%;
