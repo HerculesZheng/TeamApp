@@ -29,7 +29,7 @@
 	</div>
 </template>
 <script type="text/javascript" >
-import $ from "./common/js/jQuery-3.1.1.min.js";
+import $ from "./common/js/jquery-3.1.1.min.js";
 export default{
 	mounted:function(){		
 		$(".nav a").click(function(){

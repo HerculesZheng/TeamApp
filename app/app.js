@@ -5,8 +5,12 @@ import App from "./app.vue";
 import Home from './pages/home/home.vue';
 import Member from './pages/member/member.vue';
 import Class from './pages/class/class.vue';
+
 // import Shop from './pages/shop/shop.vue';
-import Cart from "./pages/cart/cart.vue";
+import Cart from "./pages/cart/cartTemplate.vue";
+import CartHome from "./pages/cart/cart.vue";
+import OrderConfirm from "./pages/cart/orderConfirm.vue";
+import PaySuccess from "./pages/cart/paySuccess.vue";
 
 import Login from "./pages/account/login.vue";
 import Register from "./pages/account/register.vue";
@@ -72,9 +76,23 @@ const router = new VueRouter({
       {path:"/member",component:Member},
       {path:"/class",component:Class},
       // {path:"/shop",component:Shop},
-      {path:"/cart",component:Cart,meta:{requiresAuth:true}},
+      {
+        path:"/cart",
+        component:Cart,
+        meta:{requiresAuth:true},
+        children:[
+          {path:"",component:CartHome},
+          {path:'orderConfirm',component:OrderConfirm},
+          {path:'paySuccess',component:PaySuccess}
+        ]
+      },
+      // {path:"/orderConfirm",component:OrderConfirm},
       {path:"/my",component:My,meta:{requiresAuth:true}},
-      {path:"/login",component:Login},
+      {path:"/login",component:Login,
+      children:[
+      {path:"register",component:Register},
+      {path:"changePwd",component:ChangePwd}
+      ]},
       {path:"/message",component:My_message},
       {path:"/order",component:My_order},
       {path:"/collection",component:My_collection},
@@ -95,10 +113,9 @@ const router = new VueRouter({
       {path:"/life_wonderful_estate",component:Life_wonderful_estate},
       {path:"/food_detail",component:Food_detail},
       {path:"/article_detail",component:Article_detail},
-      {path:"/life_home_article",component:Life_home_article},
+      {path:"/life_home_article",component:Life_home_article}
       // {path:"/login",component:Login},
-      {path:"/register",component:Register},
-      {path:"/changePwd",component:ChangePwd}
+      
     ]
 })
 

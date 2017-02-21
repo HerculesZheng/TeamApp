@@ -33,7 +33,14 @@ module.exports = {
 	devServer: {
 	  contentBase:"./www",
       inline: true,
-      port: 8010
+      port: 8010,
+      proxy:{
+      	'/common/php/*':{
+      		target:"http://localhost",
+      		changeOrigin:true,
+      		secure:false
+      	}
+      }
     },
 	plugins:[
 		new html({
