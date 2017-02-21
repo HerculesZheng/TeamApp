@@ -106,6 +106,10 @@ export default{
 body{
   background: #f2f2f2;
 }
+.my{
+position: relative;
+top: -42px;
+}
 .box_top{
   position: relative;
   top: 0;
