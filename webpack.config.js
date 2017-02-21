@@ -11,22 +11,22 @@ module.exports = {
 	},
 	module:{
 		loaders:[
-          {
-          	test:/\.css$/,
-          	loader:"style-loader!css-loader!less-loader"
-          },
-          {
-          	test:/\.(png|jpe?g|gif)$/,
-          	loader:"url-loader?limit=5000&name=images/[name].[hash:4].[ext]"
-          },
-          {
-            test:/\.vue$/,
-            loader:"vue-loader"
-          },
-          {
-            test:/\.(ttf|woff|eot|svg)$/,
-            loader:"file-loader?name=iconfont/[name].[hash:4].[ext]"
-          }
+			{
+				test:/\.css$/,
+				loader:"style-loader!css-loader!less-loader"
+			},
+			{
+				test:/\.(png|jpe?g|gif)$/,
+				loader:"url-loader?limit=5000&name=images/[name].[hash:4].[ext]"
+			},
+			{
+				test:/\.vue$/,
+				loader:"vue-loader"
+			},
+			{
+				test:/\.(eot|svg|ttf|woff)$/,
+				loader:"file-loader?name=iconfont/[name].[hash:4].[ext]"
+			}
 		]
 	},
 	//webpack-dev-server
@@ -48,7 +48,7 @@ module.exports = {
 			template:__dirname+"/app/index.html",
 			filename:"index.html",
 		}),
-		new clean(["www/js","www/images"]),
+		new clean(["www/iconfont","www/images","www/js","www/index.html"]),
 		// new webpack.optimize.UglifyJsPlugin({
 		// 	compress:{
 		// 		warnings:false,//取消报错提示

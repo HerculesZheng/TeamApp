@@ -52,10 +52,12 @@
 }
 .nav .nav_active{
 	color: #f29004;
-}
-.content{
-   padding-bottom: 50px;
-   font-size: 18px;
+} 
+.content{	
+	padding-top:42px;	
+	padding-bottom: 50px;
+	font-size: 18px;
+	background: #f2f2f2;
 }
 .icon_text{
 	font-size: 22px;
