@@ -14,7 +14,6 @@
 <ul class="con">
     <li>
     <router-link to="/message">
-    <!-- <router-link to="/login"> -->
       <span class="iconfont icon-gengduo iconfont_left"></span>
       <span>基本资料</span>
       <span class="iconfont icon-next iconfont_right"></span>
@@ -85,7 +84,6 @@
 </template>
 
 <script type="text/javascript">
- import $ from "../../common/js/jquery-3.1.1.min.js";
 export default{
   mounted:function(){  
     $(".bottom_border").on("click",function(){ 
@@ -162,7 +160,7 @@ body{
   padding: 14px 0;
 }
 .con >li span:nth-child(2){
-  width: 80%;
+  width: 70%;
 }
 .iconfont_left{
   margin: 0 12px;
@@ -202,7 +200,7 @@ body{
   overflow: hidden;
   border-top: 1px solid #dbdbdb;
 }
-.other >li>a,div{
+.other >li>a,.other li div{
   color: #1a1a1a;
 }
 .other >li a span{
@@ -214,7 +212,7 @@ body{
   padding: 14px 0;
 }
 .other >li span:nth-child(2){
-  width: 80%;
+  width: 70%;
 }
 .icon-iconfontshezhichilun{
   color: #aa9186;

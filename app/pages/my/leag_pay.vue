@@ -20,7 +20,9 @@
      </div>
   </div> 
 </div>
-<div class="pay_now">立即支付</div>
+<router-link to="/leag_ok"><span class="pay_now">立即支付</span>
+ </router-link>
+
 <div class="bottom_mark"></div>
 </div>
 </template>
@@ -84,6 +86,7 @@ export default{
   color: #de0000;
 }
 .pay_now{
+  display:block;
   width: 80%;
   text-align: center;
   color: #fff;

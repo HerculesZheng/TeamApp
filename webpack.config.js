@@ -25,7 +25,7 @@ module.exports = {
 			},
 			{
 				test:/\.(eot|svg|ttf|woff)$/,
-				loader:"file-loader",
+				loader:"file-loader?name=iconfont/[name].[hash:4].[ext]"
 			}
 		]
 	},
@@ -41,7 +41,7 @@ module.exports = {
 			template:__dirname+"/app/index.html",
 			filename:"index.html",
 		}),
-		new clean(["www"]),
+		new clean(["www/iconfont","www/images","www/js","www/index.html"]),
 		// new webpack.optimize.UglifyJsPlugin({
 		// 	compress:{
 		// 		warnings:false,//取消报错提示

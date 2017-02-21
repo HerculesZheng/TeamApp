@@ -5,7 +5,7 @@
 			</router-view >
 		</div>
 		<div class="nav">
-			<router-link to="/" class="active">
+			<router-link to="/home">
 				<span class="iconfont icon-shouye icon_text"></span>
 				<i class="me">首页</i>
 			</router-link>
@@ -29,15 +29,7 @@
 	</div>
 </template>
 <script type="text/javascript" >
-import $ from "./common/js/jQuery-3.1.1.min.js";
-export default{
-	mounted:function(){		
-		$(".nav a").click(function(){
-			$(".nav a").removeClass("active");
-			$(this).addClass("active");
-		})
-	}
-}
+
 </script>
 <style type="text/css" lang="less">
 @import './common/css/reset.css';
@@ -63,9 +55,9 @@ html,body{
 	text-align: center;
 	color: #808080;
 }
-.nav .active{
+.nav .nav_active{
 	color: #f29004;
-}
+} 
 .content{	
 	padding-top:42px;	
 	padding-bottom: 50px;

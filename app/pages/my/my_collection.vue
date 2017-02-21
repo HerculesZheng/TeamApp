@@ -3,7 +3,8 @@
 <header1 title="我的收藏">
 <router-link to="/my" slot="left" class="iconfont icon-shangyige head_left">
  </router-link>
-<div slot="left" class="leaguer_right">编辑</div>
+ <router-link to="/collect_edit" slot="left" class="leaguer_right">编辑
+ </router-link>
 </header1>
 <div class="collection_box">
 <span><img src="./img/dingdan1.png"></span>

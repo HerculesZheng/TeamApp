@@ -5,11 +5,11 @@
  </router-link>
 </header1>
 <ul class="catalog">
-  <li><a href="#">待付款</a></li>
-  <li><a href="#">待发货</a></li>
-  <li><a href="#">待收货</a></li>
-  <li><a href="#">已完成</a></li>
-  <li><a href="#">退货/售后</a></li>
+  <li class="active"><router-link to="/order">待付款</router-link></li>
+  <li><router-link to="/wait_fahuo">待发货</router-link></li>
+  <li><router-link to="/wait_shouhuo">待收货</router-link></li>
+  <li><router-link to="/order_over">已完成</router-link></li>
+  <li><router-link to="/after_sale">退货/售后</router-link></li>
 </ul>
 <ul class="detail">
   <li>
@@ -33,8 +33,8 @@
    <span>合计:</span>
    <span>￥13</span>
    <div class="flo_right">
-     <button>取消订单</button>
-     <button>立即支付</button>
+     <router-link to=""><button class="quxiao">取消订单</button></router-link>
+     <router-link to="/go_zhifu"><button class="zhifu">立即支付</button></router-link>
    </div>
   </li> 
 </ul>
@@ -61,8 +61,8 @@
    <span>合计:</span>
    <span>￥13</span>
    <div class="flo_right">
-     <button>取消订单</button>
-     <button>立即支付</button>
+     <router-link to=""><button class="quxiao">取消订单</button></router-link>
+     <router-link to="/go_zhifu"><button class="zhifu">立即支付</button></router-link>
    </div>
   </li>
 </ul>
@@ -85,12 +85,22 @@ export default{
 .catalog{
   border-bottom: 1px solid #dbdbdb;
   overflow: hidden;
+  width:100%;
+   display: flex;
+  justify-content: space-around;
+}
+.catalog .active{
+  border-bottom: 2px solid #f29004;
+}
+.catalog li{
+  float: left;
+  margin-left: 2%;
 }
 .catalog li a{
-  float: left;
-  padding: 14px 5px;
-  margin-left: 3%;
+  display: inline-block;
+  padding: 12px 4px;
   color: #333333;
+  font-size: 16px;
 }
 .detail{
   margin-top: 12px;
@@ -144,17 +154,21 @@ export default{
   float: right;
   margin-top: 4px;
 }
+.flo_right a{
+  display: inline-block;
+
+}
 .flo_right button{
   background: #fff;
   padding: 8px 18px;
   border-radius: 5px;
 }
-.flo_right button:first-child{
+.flo_right .quxiao{
   color: #999999;
   border: 1px solid #999999;
   margin-right: 8px;
 }
-.flo_right button:last-child{
+.flo_right .zhifu{
   color: #f29004;
   border: 1px solid #f29004;
 
