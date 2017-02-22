@@ -52,7 +52,6 @@ import My_leaguer from './pages/my/my_leaguer.vue';
 import My_more from './pages/my/my_more.vue';
 import Mes_name from './pages/my/mes_name.vue';
 import Mes_contact from './pages/my/mes_contact.vue';
-import Contact_edit from './pages/my/contact_edit.vue';
 import Mes_changepass from './pages/my/mes_changepass.vue';
 import Mes_changepurse from './pages/my/mes_changepurse.vue';
 import Offer from './pages/my/mes_offer.vue';
@@ -66,13 +65,12 @@ import Suggest from './pages/my/suggest.vue';
 import Problem from './pages/my/com_problem.vue';
 import Address_edit from './pages/my/address_edit.vue';
 import Add_address from './pages/my/add_address.vue';
-import Collect_edit from './pages/my/collect_edit.vue';
+import Wait_pay from './pages/my/wait_pay.vue';
 import Wait_fahuo from './pages/my/wait_fahuo.vue';
 import Wait_shouhuo from './pages/my/wait_shouhuo.vue';
 import Order_over from './pages/my/order_over.vue';
 import After_sale from './pages/my/after_sale.vue';
 import Go_zhifu from './pages/my/go_zhifu.vue';
-import Pay_yes from './pages/my/pay_yes.vue';
 import Sure_shop from './pages/my/sure_shop.vue';
 import Shouhuo_ok from './pages/my/shouhuo_ok.vue';
 import Go_comments from './pages/my/go_comments.vue';
@@ -116,42 +114,72 @@ const router = new VueRouter({
       {path:"register",component:Register},
       {path:"changePwd",component:ChangePwd}
       ]},
-      {path:"/message",component:My_message},
-      {path:"/order",component:My_order},
+      {path:"/message",component:Template,
+           children:[
+             {path:"",component:My_message},
+             {path:"mes_name",name:"mes_name",component:Mes_name},
+             {path:"mes_contact",name:"mes_contact",component:Mes_contact},
+             {path:"changepass",name:"changepass",component:Mes_changepass},
+             {path:"changepurse",name:"changepurse",component:Mes_changepurse},
+             {path:"offer",name:"offer",component:Offer},
+               ]
+      },
+      {path:"/order",component:My_order,
+           children:[
+             {path:"",redirect:"wait_pay"},
+             {path:"wait_pay",component:Wait_pay},
+             {path:"wait_fahuo",component:Wait_fahuo},
+             {path:"wait_shouhuo",component:Wait_shouhuo},
+             {path:"order_over",component:Order_over},
+             {path:"after_sale",component:After_sale},
+               ]
+      },
       {path:"/collection",component:My_collection},
-      {path:"/address",component:My_address},
-      {path:"/purse",component:My_purse},
-      {path:"/leaguer",component:My_leaguer},
-      {path:"/more",component:My_more},
-      {path:"/mes_name",component:Mes_name},
-      {path:"/mes_contact",component:Mes_contact}, 
-      {path:"/contact_edit",component:Contact_edit}, 
-
-      {path:"/changepass",component:Mes_changepass},
-      {path:"/changepurse",component:Mes_changepurse},
-      {path:"/offer",component:Offer},
-      {path:"/bill",component:Bill},
-      {path:"/zhi_add",component:Zhi_add},
-      {path:"/leag_pay",component:Leag_pay},
-      {path:"/leag_ok",component:Leag_ok},
-      {path:"/about",component:About},
-      {path:"/help",component:Help},
-      {path:"/suggest",component:Suggest},
-      {path:"/problem",component:Problem},
-      {path:"/address_edit",component:Address_edit},
-      {path:"/add_address",component:Add_address},
-      {path:"/collect_edit",component:Collect_edit},
-      {path:"/wait_fahuo",component:Wait_fahuo},
-      {path:"/wait_shouhuo",component:Wait_shouhuo},
-      {path:"/order_over",component:Order_over},
-      {path:"/after_sale",component:After_sale},
+      {path:"/address",component:Template,
+            children:[
+             {path:"",component:My_address},
+              {path:"address_edit",name:"address_edit",component:Address_edit},
+              {path:"add_address",name:"add_address",component:Add_address},
+            ]
+      },
+      {path:"/purse",component:Template,
+           children:[
+             {path:"",component:My_purse},
+             {path:"bill",name:"bill",component:Bill},
+             {path:"zhi_add",name:"zhi_add",component:Zhi_add},
+            ]
+      },
+      {path:"/leaguer",component:Template,
+            children:[
+             {path:"",component:My_leaguer},
+             {path:"leag_pay",component:Template,
+               children:[
+                  {path:"",name:"leag_pay",component:Leag_pay},
+                  {path:"leag_ok",name:"leag_ok",component:Leag_ok},
+                  ]
+             },
+            ]
+      },
+      {path:"/more",component:Template,
+            children:[
+             {path:"",component:My_more},
+             {path:"about",name:"about",component:About},
+             {path:"help",component:Template,
+                 children:[
+                   {path:"",name:"help",component:Help,},
+                   {path:"problem",name:"problem",component:Problem},
+                     ]
+             },
+             {path:"suggest",name:"suggest",component:Suggest},
+            ]
+      },
       {path:"/go_zhifu",component:Go_zhifu},
-      {path:"/pay_yes",component:Pay_yes},
       {path:"/sure_shop",component:Sure_shop},
       {path:"/shouhuo_ok",component:Shouhuo_ok},
       {path:"/go_comments",component:Go_comments},
       {path:"/comments_ok",component:Comment_ok},
       {path:"/yi_comments",component:Yi_comments},
+
       {path:"/area",component:Area},
 
       {path:"/search",component:Search},

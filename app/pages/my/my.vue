@@ -1,6 +1,5 @@
 <template>
 <div class="my">
-<!-- <header1 title="我的"></header1> -->
 <div class="my_box">
 <div box_top>
 <img src="./img/my_bg1.png" class="top_bg">
@@ -107,8 +106,9 @@ body{
   background: #f2f2f2;
 }
 .my{
-position: relative;
-top: -42px;
+position: absolute;
+top: -21px;
+
 }
 .box_top{
   position: relative;
@@ -259,3 +259,15 @@ top: -42px;
   display: none;
  }
 </style>
+
+
+
+
+
+
+
+
+
+
+
+

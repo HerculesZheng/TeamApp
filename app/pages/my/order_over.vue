@@ -1,16 +1,6 @@
 <template>
 <div class="order_over">
-<header1 title="我的订单">
-<router-link to="/my" slot="left" class="iconfont icon-shangyige head_left">
- </router-link>
-</header1>
-<ul class="catalog">
-  <li><router-link to="/order">待付款</router-link></li>
-  <li><router-link to="/wait_fahuo">待发货</router-link></li>
-  <li><router-link to="/wait_shouhuo">待收货</router-link></li>
-  <li class="active"><router-link to="/order_over">已完成</router-link></li>
-  <li><router-link to="/after_sale">退货/售后</router-link></li>
-</ul>
+
 <ul class="detail">
   <li>
     <span>订单编号:</span>
@@ -34,7 +24,7 @@
    <span>￥13</span>
    <div class="flo_right">
      <button class="delete">删除</button>
-     <router-link to="go_comments"><button class="zhifu go_comment">去评价</button></router-link>
+     <router-link to="/go_comments"><button class="zhifu go_comment">去评价</button></router-link>
    </div>
   </li> 
 </ul>
@@ -62,8 +52,7 @@
    <span>￥13</span>
    <div class="flo_right">
      <button class="delete">删除</button>
-     <router-link to="yi_comments"><button class="zhifu go_comment" id="over_comment">已评价</button></router-link>
-     <!-- <button id="over_comment">已评价</button> -->
+     <router-link to="/yi_comments"><button class="zhifu go_comment" id="over_comment">已评价</button></router-link>
    </div>
   </li>
 </ul>
@@ -72,12 +61,7 @@
 </template>
 
 <script type="text/javascript">
-import Header1 from '../../component/header/header.vue';
-export default{
-  components:{
-    Header1
-  }
-}
+
 </script>
 <style type="text/css">
 .order_over ul{

@@ -1,7 +1,7 @@
 <template>
 <div class="go_comments">
 <header1 title="评论">
-<router-link to="/order_over" slot="left" class="iconfont icon-shangyige head_left">
+<router-link to="/shouhuo_ok" slot="left" class="iconfont icon-shangyige head_left">
  </router-link>
 </header1>
 <ul class="detail" id="deta_top">

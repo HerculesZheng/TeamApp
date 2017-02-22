@@ -13,7 +13,7 @@
  <div class="question">常见问题</div>
  <ul class="message_server list_question">
   <li>
-   <router-link to="/problem">
+   <router-link :to="{name:'problem'}">
       <span>1.如何修改默认地址</span>
       <span class="iconfont icon-next iconfont_right"></span>
    </router-link>
