@@ -1,7 +1,7 @@
 <template>
 <div class="com_problem">
 <header1 title="常见问题">
-<router-link to="/help" slot="left" class="iconfont icon-shangyige head_left">
+<router-link :to="{name:'help'}" slot="left" class="iconfont icon-shangyige head_left">
  </router-link>
 </header1>
  <ul class="answer">

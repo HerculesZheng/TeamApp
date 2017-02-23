@@ -1,16 +1,5 @@
 <template>
 <div class="wait_fahuo">
-<header1 title="我的订单">
-<router-link to="/my" slot="left" class="iconfont icon-shangyige head_left">
- </router-link>
-</header1>
-<ul class="catalog">
-  <li><router-link to="/order">待付款</router-link></li>
-  <li class="active"><router-link to="/wait_fahuo">待发货</router-link></li>
-  <li><router-link to="/wait_shouhuo">待收货</router-link></li>
-  <li><router-link to="/order_over">已完成</router-link></li>
-  <li><router-link to="/after_sale">退货/售后</router-link></li>
-</ul>
 <ul class="detail">
   <li>
     <span>订单编号:</span>

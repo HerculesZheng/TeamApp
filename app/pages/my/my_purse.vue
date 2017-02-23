@@ -3,7 +3,7 @@
 <header1 title="我的钱包">
 <router-link to="/my" slot="left" class="iconfont icon-shangyige head_left">
  </router-link>
-<router-link to="/bill" slot="left" class="purse_right">账单</router-link>
+<router-link :to="{name:'bill'}" slot="left" class="purse_right">账单</router-link>
 </header1>
 <ul class="purse_box">
   <li><img src="./img/purse.png"></li>
@@ -27,7 +27,7 @@
    </label>
   </li>
 </ul>
-<router-link to="/zhi_add">
+<router-link :to="{name:'zhi_add'}">
 <input type="submit" value="充值" class="tijiao" />
   </router-link>
 </form>

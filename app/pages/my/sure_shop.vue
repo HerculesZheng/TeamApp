@@ -1,7 +1,7 @@
 <template>
 <div class="sure_shop">
 <header1 title="订单详情">
-<router-link to="/wait_shouhuo" slot="left" class="iconfont icon-shangyige head_left">
+<router-link to="/order/wait_shouhuo" slot="left" class="iconfont icon-shangyige head_left">
  </router-link>
 </header1>
 <div class="address_box">
@@ -18,7 +18,7 @@
 <ul class="detail" id="deta_top">
   <li>
     <span>购买商品</span>
-    <span class="wait wait_color">待收款</span>
+    <span class="wait wait_color">待收货</span>
   </li>
   <li class="pic">
    <span><img src="./img/dingdan1.png"></span>
