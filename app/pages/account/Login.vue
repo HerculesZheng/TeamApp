@@ -1,30 +1,30 @@
 <template>
-<div class="my_address">
-<header1 title="登陆">
-<router-link to="/my" slot="left" class="iconfont icon-shangyige head_left">
- </router-link>
- <div slot="left" class="leaguer_right">
- <router-link to="/login/register">注册</router-link>
-</div>
-</header1>
-<div class="log_img">
-  <img src="../my/img/denglu.png">
-</div>
-<form action="" name="" class="log_form">
- <div class="log_name">
-   <label for="name" class="iconfont icon-denglu"></label>
-   <input type="" name="name" id="name" placeholder="请输入账号/手机号">
- </div>
- <div class="log_pass">
-   <label for="password" class="iconfont icon-suo"></label>
-   <input type="" id="password" name="password" placeholder="请输入密码">
- </div>
- <router-link to="changePwd">忘记密码?</a>
- <span class="clear"></span>
- <button class="log_btn">登陆</button>
-</form>
-<div class="bottom_mark"></div>
-</div>
+  <div class="my_address">
+    <header1 title="登陆">
+      <router-link to="/my" slot="left" class="iconfont icon-shangyige head_left">
+      </router-link>
+      <div slot="left" class="leaguer_right">
+        <router-link to="/login/register">注册</router-link>
+      </div>
+    </header1>
+    <div class="log_img">
+      <img src="../my/img/denglu.png">
+    </div>
+    <form action="" name="" class="log_form">
+      <div class="log_name">
+        <label for="name" class="iconfont icon-denglu"></label>
+        <input type="" name="name" id="name" placeholder="请输入账号/手机号">
+      </div>
+      <div class="log_pass">
+        <label for="password" class="iconfont icon-suo"></label>
+        <input type="" id="password" name="password" placeholder="请输入密码">
+      </div>
+      <router-link to="changePwd">忘记密码?</a>
+      <span class="clear"></span>
+      <button class="log_btn">登陆</button>
+    </form>
+    <div class="bottom_mark"></div>
+  </div>
 </template>
 
 <script type="text/javascript">
@@ -35,7 +35,7 @@ export default{
 	},
   methods:
   {
-
+    
   }
 }
 </script>

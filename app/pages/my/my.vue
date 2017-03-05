@@ -99,6 +99,13 @@ export default{
           $(".logout_panel").hide();
           $(".main_mark").hide();     
  });
+   $(".logout_yes").on("click",function(){
+          sessionStorage.isLoggedIn=false;
+          sessionStorage.account="";
+
+          $(".logout_panel").hide();
+          $(".main_mark").hide(); 
+   })
   }
 }
 </script>

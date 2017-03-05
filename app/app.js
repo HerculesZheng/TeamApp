@@ -79,7 +79,7 @@ import Go_comments from './pages/my/go_comments.vue';
 import Comment_ok from './pages/my/comments_ok.vue';
 import Yi_comments from './pages/my/yi_comments.vue';
 
-const auth={
+var auth={
   isLoggedIn:true,
   account:"",
   name:"",
@@ -176,7 +176,7 @@ const router = new VueRouter({
 
 router.beforeEach((to,from,next)=>{
   if (to.matched.some(record=>record.meta.requiresAuth)) {
-    if (!auth.isLoggedIn) {
+    if (sessionStorage.isLoggedIn) {
       next({
         path:"/login",
         query:{redirect:to.fullPath}
@@ -189,7 +189,16 @@ router.beforeEach((to,from,next)=>{
   }
 })
 
+Vue.mixin({
+  created:function(){
+    var myOption = this.$options.myOption;
+    // if (myOption) {console.log(myOption)};
+  }
+})
+
 new Vue({
-    router,
-    render:h=>h(App)
+    router,    
+    render:h=>h(App),
+    myOption:auth
 }).$mount("#app")
+

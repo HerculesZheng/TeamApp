@@ -31,16 +31,16 @@ module.exports = {
 	},
 	//webpack-dev-server
 	devServer: {
-	  contentBase:"./www",
-      inline: true,
-      port: 8010,
-      proxy:{
-      	'/common/php/*':{
-      		target:"http://localhost",
-      		changeOrigin:true,
+	  proxy:{
+      	'TeamAppPHP/*':{
+      		target:"http://localhost:8086",
+      		changeOrigin:false,
       		secure:false
-      	}
-      }
+      	}      	      
+      },
+      contentBase:"./www",
+      inline: true,
+      port: 8010     
     },
 	plugins:[
 		new html({
