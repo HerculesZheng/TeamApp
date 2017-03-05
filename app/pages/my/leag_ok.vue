@@ -1,7 +1,7 @@
 <template>
 <div class="leag_ok">
 <header1 title="支付成功">
-<router-link to="/leag_pay" slot="left" class="iconfont icon-shangyige head_left">
+<router-link :to="{name:'leag_pay'}" slot="left" class="iconfont icon-shangyige head_left">
  </router-link>
 </header1>
 <ul class="pay_ok">

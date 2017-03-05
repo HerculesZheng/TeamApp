@@ -20,7 +20,7 @@
      </div>
   </div> 
 </div>
-<router-link to="/leag_ok"><span class="pay_now">立即支付</span>
+<router-link :to="{name:'leag_ok'}"><span class="pay_now">立即支付</span>
  </router-link>
 
 <div class="bottom_mark"></div>

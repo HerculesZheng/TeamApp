@@ -6,19 +6,19 @@
 </header1>
 <ul class="message_server">
   <li>
-   <router-link to="/about">
+   <router-link :to="{name:'about'}">
       <span>关于我们</span>
       <span class="iconfont icon-next iconfont_right"></span>
    </router-link>
   </li>
   <li>
-   <router-link to="/help">
+   <router-link :to="{name:'help'}">
       <span>帮助中心</span>
       <span class="iconfont icon-next iconfont_right"></span>
    </router-link>
   </li>
   <li>
-   <router-link to="/suggest">
+   <router-link :to="{name:'suggest'}">
       <span>意见反馈</span>
       <span class="iconfont icon-next iconfont_right"></span>
    </router-link>

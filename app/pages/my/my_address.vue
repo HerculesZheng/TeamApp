@@ -14,7 +14,7 @@
     <span>广州市天河区东圃时代TIT广场</span>
   </li>
 </ul>
-<router-link to="/address_edit" slot="left" class="iconfont icon-next iconfont_right next"></router-link>
+<router-link :to="{name:'address_edit'}" slot="left" class="iconfont icon-next iconfont_right next"></router-link>
 </div>
 <div class="address_box">
 <ul>
@@ -28,7 +28,7 @@
 </ul>
 <span class="iconfont icon-next iconfont_right next"></span> 
 </div>
-<router-link to="/add_address">
+<router-link :to="{name:'add_address'}">
 <span class="new_address">新增收货地址</span>
 </router-link>
 <div class="bottom_mark"></div>

@@ -5,7 +5,7 @@
  </router-link>
 </header1>
  <textarea name="" rows="10" class="suggest_text"></textarea>
- <router-link to="/leag_ok"><span class="suggest_sure">确认</span>
+ <span class="suggest_sure">确认</span>
 <div class="bottom_mark"></div>
 </div>
 </template>

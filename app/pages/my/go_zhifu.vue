@@ -18,7 +18,7 @@
 <ul class="detail">
   <li>
     <span>购买商品</span>
-    <span class="wait wait_color">待付款</span>
+    <span class="wait wait_color">{{bol?"待付款":"待收货"}}</span>
   </li>
   <li class="pic">
    <span><img src="./img/dingdan1.png"></span>
@@ -40,14 +40,14 @@
 </ul>
  <ul class="order_mes">
   <li class="xinxi">订单信息</li>
-  <li class="bianhao">订单编号:&nbsp&nbspSKYJ12525441</br>
-  创建时间:2015-10-02&nbsp&nbsp&nbsp12:20</li>
+  <li class="bianhao">
+    <div>订单编号:&nbsp&nbspSKYJ12525441</div>
+    <div>创建时间:2015-10-02&nbsp&nbsp&nbsp12:20</div>
+    <div v-if="!bol">付款时间:2015-10-02&nbsp&nbsp&nbsp12:36</div>
+  </li>
  </ul>
 <div class="bottom_mark">
-<router-link to="/pay_yes">
-  <span class="shop_pay">立即支付</span>
-</router-link>
-  
+  <span class="shop_pay" @click="bol=!bol" v-show="bol">立即支付</span>
 </div>
 </div>
 </template>
@@ -57,7 +57,12 @@ import Header1 from '../../component/header/header.vue';
 export default{
 	components:{
 		Header1
-	}
+	},
+  data(){
+    return{
+      bol:true,
+    }
+  }
 }
 </script>
 <style type="text/css">

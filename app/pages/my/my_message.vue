@@ -13,22 +13,23 @@
    </router-link>
   </li>
   <li>
-   <router-link to="/mes_name">
+   <router-link :to="{name:'mes_name'}">
       <span>姓名</span>
       <span class="iconfont icon-next iconfont_right"></span>
       <span class="message_text">李晓晓</span>
    </router-link>
+
   </li>
   <li>
-   <router-link to="">
+    <div>
       <span>会员标志</span>
       <span class="message_logo">
         <img src="./img/zhuanshi.png">
       </span>
-   </router-link>
+    </div>
   </li>
   <li>
-   <router-link to="/mes_contact">
+   <router-link :to="{name:'mes_contact'}">
       <span id="contact_type">联系方式</span>
       <span class="iconfont icon-next iconfont_right"></span>
       <span class="message_text">136****6688</span>
@@ -38,24 +39,25 @@
 
 <ul class="message_server">
   <li>
-   <router-link to="/changepass">
+   <router-link :to="{name:'changepass'}">
       <span>修改密码</span>
       <span class="iconfont icon-next iconfont_right"></span>
    </router-link>
   </li>
   <li>
-   <router-link to="/changepurse">
+   <router-link :to="{name:'changepurse'}">
       <span>修改钱包密码</span>
       <span class="iconfont icon-next iconfont_right"></span>
    </router-link>
   </li>
   <li>
-   <router-link to="/offer">
+   <router-link :to="{name:'offer'}">
       <span>我能供应</span>
       <span class="iconfont icon-next iconfont_right"></span>
    </router-link>
   </li>
 </ul>
+
  <div class="bottom_mark"></div>
 </div>
 </template>
@@ -65,7 +67,8 @@ import Header1 from '../../component/header/header.vue';
 export default{
 	components:{
 		Header1
-	}
+	},
+ 
 }
 </script>
 <style type="text/css">
@@ -86,7 +89,7 @@ export default{
 .message_top >li:nth-child(1){
   line-height: 45px;
 }
-.message_top >li>a{
+.message_top >li>a,.message_top >li>div{
   color: #9f9f9f;
 }
 .message_top >li a span{
@@ -94,6 +97,10 @@ export default{
   padding: 14px 10px;
 }
 .message_top >li a span:nth-child(1){
+  padding: 14px 50% 14px 10px;
+}
+.message_top >li div span:nth-child(1){
+  display: inline-block;
   padding: 14px 50% 14px 10px;
 }
 #contact_type{
